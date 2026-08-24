@@ -1,0 +1,20 @@
+true == function()
+{
+	var i = 0;
+	var count = 0;
+	var total =0;
+	while (count < 5){
+		total = total + [ih][i].QTotTran5J;
+		i = i + 1;
+		if ([ih][i].QTotTran5J > 0){
+			count = count + 1;
+		}
+		if (i > 60){
+			return false;
+		}
+	}
+	var ave = total/5;
+	if (ave*4<(tvol) &&  (ct).Buy_I_Volume / (ct).Buy_CountI > 2*((ct).Sell_I_Volume / (ct).Sell_CountI)){
+	return true;
+	}
+}()
