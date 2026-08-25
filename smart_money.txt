@@ -1,9 +1,10 @@
 true == function()
 {
+	var days = 5;
 	var i = 0;
 	var count = 0;
 	var total =0;
-	while (count < 5){
+	while (count < days){
 		total = total + [ih][i].QTotTran5J;
 		i = i + 1;
 		if ([ih][i].QTotTran5J > 0){
@@ -13,7 +14,7 @@ true == function()
 			return false;
 		}
 	}
-	var ave = total/5;
+	var ave = total/days;
 	if (ave*4<(tvol) &&  (ct).Buy_I_Volume / (ct).Buy_CountI > 2*((ct).Sell_I_Volume / (ct).Sell_CountI)){
 	return true;
 	}
