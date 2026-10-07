@@ -1,0 +1,37 @@
+true == function() {
+    var days = 5;
+    var count = 0;
+    var total = 0;
+    var i = 1;                  
+    
+    while (count < days && i < 60) {
+        var v = [ih][i].QTotTran5J;
+        if (v > 0) {           
+            total += v;
+            count++;
+        }
+        i++;
+    }
+    
+    if (count < days) return false; 
+    
+    var avgVol = total / days;
+    
+
+    var volCondition = (tvol) > 1.5 * avgVol && (tvol) < 3 * avgVol;
+    
+    var buyPower  = (ct).Buy_I_Volume  / (ct).Buy_CountI;
+    var sellPower = (ct).Sell_I_Volume / (ct).Sell_CountI;
+    var powerRatio = buyPower / sellPower;
+    var powerCondition = powerRatio > 1.2 && powerRatio < 1.8;
+
+    var priceRange = (pl) / (py) - 1;
+    var priceCondition = priceRange > -0.01 && priceRange < 0.015;
+    
+
+    var moneyIn = (ct).Buy_I_Volume > (ct).Sell_I_Volume;
+    
+    if (volCondition && powerCondition && priceCondition && moneyIn) {
+        return true;
+    }
+}()
